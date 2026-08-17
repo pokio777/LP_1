@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ ー 今日のご飯</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="sitenav">
+  <div class="inner">
+    <a href="index.html" class="logo"><span class="stub"></span>今日<span class="accent">の</span>ご飯</a>
+    <div class="navlinks">
+      <a href="index.html#how">使い方</a>
+      <a href="index.html#pricing">料金</a>
+      <a href="index.html#faq">よくある質問</a>
+    </div>
+    <a href="index.html#pricing" class="cta">はじめる</a>
+  </div>
+</header>
+
+<main class="legal-page">
+  <div class="wrap narrow">
+    <h1>お問い合わせ</h1>
+    <p>サービスに関するご質問、有料プラン(解約・課金等)についてのご相談、その他お問い合わせは、以下のフォームまたはメールアドレスよりご連絡ください。</p>
+
+    <div class="legal-note">
+      <b>特定商取引法に基づく開示請求について:</b><br>
+      販売事業者情報(代表者氏名・所在地・電話番号)の開示をご希望の方は、お問い合わせ種別で「特商法に基づく情報の開示請求」を選択の上、ご連絡ください。遅滞なく開示いたします。
+    </div>
+
+    <!-- メール送信フォーム (Formspree等の無料フォームサービスやGoogleフォーム等に接続可能) -->
+    <form action="mailto:nananahiroba777@gmail.com" method="post" enctype="text/plain" class="contact-form">
+
+      <div class="form-group">
+        <label for="name">お名前 <span class="req">*</span></label>
+        <input type="text" id="name" name="お名前" required placeholder="山田 太郎">
+      </div>
+
+      <div class="form-group">
+        <label for="email">メールアドレス <span class="req">*</span></label>
+        <input type="email" id="email" name="メールアドレス" required placeholder="example@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="category">お問い合わせ種別 <span class="req">*</span></label>
+        <select id="category" name="お問い合わせ種別" required>
+          <option value="">選択してください</option>
+          <option value="アプリの使い方・不具合">アプリの使い方・不具合について</option>
+          <option value="有料プラン・課金・解約">有料プラン・課金・解約について</option>
+          <option value="特商法に基づく情報の開示請求">特商法に基づく情報の開示請求</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">お問い合わせ内容 <span class="req">*</span></label>
+        <textarea id="message" name="お問い合わせ内容" rows="6" required placeholder="具体的な内容をご記入ください"></textarea>
+      </div>
+
+      <p class="form-note">※送信いただいた情報は、当社<a href="privacy.html">プライバシーポリシー</a>に従い適切に管理いたします。</p>
+
+      <button type="submit" class="form-submit">送信する</button>
+    </form>
+
+    <div class="contact-direct">
+      <p><strong>直接メールでお問い合わせする場合:</strong><br>
+      <a href="mailto:nananahiroba777@gmail.com">nananahiroba777@gmail.com</a></p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap inner">
+    <a href="index.html" class="logo">今日<span class="accent">の</span>ご飯</a>
+    <div class="footlinks">
+      <a href="terms.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="contact.html">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="copyright mono">&copy; 2026 今日のご飯 ー 一人暮らし大学生のための晩ごはん決定アプリ</p>
+</footer>
+
+</body>
+</html>
