@@ -343,6 +343,34 @@ table.tsho td{color:var(--ink);}
   .sitenav .logo{font-size:17px;}
 }
 
+
+/* ---------- いますぐ体験(アプリ埋め込み) ---------- */
+.tryit{background:var(--card-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.tryit-grid{display:grid;grid-template-columns:1fr auto;gap:64px;align-items:center;max-width:920px;margin:0 auto;}
+.tryit-copy h2{font-size:28px;font-weight:900;letter-spacing:-.01em;}
+.tryit-copy > p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin:14px 0 0;}
+.tryit-list{list-style:none;margin:20px 0 26px;padding:0;display:grid;gap:10px;font-size:14px;}
+.tryit-list li{display:flex;gap:8px;align-items:flex-start;line-height:1.7;}
+.tryit-list i{color:var(--green);font-size:18px;margin-top:2px;flex-shrink:0;}
+.tryit-small{font-size:12px;color:var(--ink-soft);line-height:1.8;margin:12px 0 0;}
+.demo-phone{
+  width:372px;background:var(--ink);border-radius:44px;padding:12px;position:relative;
+  box-shadow:0 26px 50px rgba(43,38,32,.28),0 2px 0 rgba(255,255,255,.08) inset;
+}
+.demo-phone::before{
+  content:"";position:absolute;top:19px;left:50%;transform:translateX(-50%);
+  width:84px;height:6px;border-radius:6px;background:rgba(255,255,255,.18);z-index:2;pointer-events:none;
+}
+.demo-screen{border-radius:34px;overflow:hidden;background:var(--paper-deep);height:720px;}
+.demo-screen iframe{display:block;width:100%;height:100%;border:0;}
+.demo-cap{text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--ink-soft);margin:14px 0 0;}
+@media (max-width:860px){
+  .tryit-grid{grid-template-columns:1fr;gap:36px;text-align:center;}
+  .tryit-list{max-width:340px;margin-left:auto;margin-right:auto;text-align:left;}
+  .tryit-copy .btn-primary-lg{margin:0 auto;}
+  .demo-phone{margin:0 auto;width:min(372px,100%);}
+  .demo-screen{height:640px;}
+}
 </style>
 </head>
 <body>
@@ -352,10 +380,11 @@ table.tsho td{color:var(--ink);}
     <a href="index.html" class="logo">今日<span class="accent">の</span>ご飯</a>
     <nav class="navlinks">
       <a href="#how">使い方</a>
+      <a href="#try">体験する</a>
       <a href="#pricing">料金</a>
       <a href="#faq">よくある質問</a>
     </nav>
-    <a href="#cta" class="cta">はじめる</a>
+    <a href="#try" class="cta">はじめる</a>
   </div>
 </header>
 
@@ -367,7 +396,7 @@ table.tsho td{color:var(--ink);}
       <h1>迷うな、<span class="line2"><span class="accent">めくれ。</span></span></h1>
       <p class="hero-sub">気分をタップすれば、1人分・15分・280円前後の一皿が一枚。献立を考える、レシピを探す、量を計算する──そのぜんぶを、今日はしなくていい。</p>
       <div class="hero-ctas">
-        <a href="#cta" class="btn-primary-lg"><i class="ti ti-ticket"></i>今日の一枚を無料で引く</a>
+        <a href="#try" class="btn-primary-lg"><i class="ti ti-ticket"></i>今日の一枚を無料で引く</a>
         <span class="hero-note">1日1食ぶんはずっと無料・登録1分</span>
       </div>
       <div class="trustchips">
@@ -472,6 +501,34 @@ table.tsho td{color:var(--ink);}
   </div>
 </section>
 
+<!-- ============ いますぐ体験(アプリ埋め込み) ============ -->
+<section class="tryit" id="try">
+  <div class="wrap">
+    <div class="tryit-grid">
+      <div class="tryit-copy">
+        <p class="eyebrow"><i class="ti ti-device-mobile"></i>いますぐ体験</p>
+        <h2>登録の前に、<br><span class="accent">一枚だけ</span>引いてみる。</h2>
+        <p>右の画面は、本物のアプリです。いくつか質問に答えたら、気分をタップして今日の一枚を引いてみてください。</p>
+        <ul class="tryit-list">
+          <li><i class="ti ti-check"></i>アカウント登録なしで、そのまま試せる</li>
+          <li><i class="ti ti-check"></i>1日1食ぶんの献立は、ずっと無料</li>
+          <li><i class="ti ti-check"></i>気に入ったら、そのまま続きから使える</li>
+        </ul>
+        <a href="https://pokio777.github.io/app_1/" target="_blank" rel="noopener" class="btn-primary-lg"><i class="ti ti-external-link"></i>アプリを別タブで開く</a>
+        <p class="tryit-small">うまく表示されないときや、Googleログイン・お支払いは、別タブで開いてお使いください。</p>
+      </div>
+      <div>
+        <div class="demo-phone">
+          <div class="demo-screen">
+            <iframe src="https://pokio777.github.io/app_1/onboarding.html" title="今日のご飯 アプリ体験" loading="lazy" allow="clipboard-write"></iframe>
+          </div>
+        </div>
+        <p class="demo-cap">LIVE DEMO ー 本物のアプリが動いています</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 定期プラン ============ -->
 <section class="pricing" id="pricing">
   <div class="wrap">
@@ -506,7 +563,7 @@ table.tsho td{color:var(--ink);}
         <li><i class="ti ti-check"></i>週の栄養バランスをレシートで自動集計</li>
         <li><i class="ti ti-check"></i>翌週以降も自動で献立が届く</li>
       </ul>
-      <a href="#cta" class="pc-btn">定期プランを見る</a>
+      <a href="https://pokio777.github.io/app_1/" target="_blank" rel="noopener" class="pc-btn">定期プランを見る</a>
       <p class="pc-trust">初期費用なし・違約金なし・ワンタップ解約</p>
     </div>
   </div>
@@ -549,7 +606,7 @@ table.tsho td{color:var(--ink);}
   <div class="narrow">
     <h2>今夜の献立、<br>もう考えなくていい。</h2>
     <p>気分をタップして、一枚引くだけ。</p>
-    <a href="#" class="btn-primary-lg"><i class="ti ti-ticket"></i>今日の一枚を無料で引く</a>
+    <a href="https://pokio777.github.io/app_1/" target="_blank" rel="noopener" class="btn-primary-lg"><i class="ti ti-ticket"></i>今日の一枚を無料で引く</a>
     <p class="hero-note">1日1食は完全無料・クレジットカード登録不要</p>
   </div>
 </section>
